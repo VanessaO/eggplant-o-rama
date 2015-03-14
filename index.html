@@ -6,25 +6,20 @@
 	<link rel="stylesheet" href="styles.css">
 	<script src="apps.js"></script>
 	<link href='http://fonts.googleapis.com/css?family=Crete+Round|Pacifico' rel='stylesheet' type='text/css'>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+   <script type="text/javascript" src="apps.js"></script>
 </head>
 <body>
 	<header>
-		<nav>
-			<ul class="clearfix">
-				<li><a class="intro" href="#">>>Intro</a></li>
-				<li><a class="restart" href="#">Start Over<<</a></li>
-			</ul>
-		</nav>
 		<h1 id="title">Eggplant-O-Rama</h1>
 		<div id="info">
-  <h1>Welcome to Eggplant-O-Rama!</h1>
-  <button id="start">Start!</button>
-  <p>Go ahead and test your eggplant knowledge!</p>
+		  <h1>Welcome to Eggplant-O-Rama!</h1>
+		  <button id="start">Start!</button>
+		  <p>Go ahead and test your eggplant knowledge!</p>
 		</div>
 	</header>
 	<div id="quizQuestions">
-		<div id="photo"><img src="http://i.imgur.com/uy7hs2X.png" width="420px" height="325px"></div>
-    <p id="counter"><span id="count">3</span>/5</p>
+		<div id="photoAndCounter"><img src="http://i.imgur.com/uy7hs2X.png" width="420px" height="325px"><p id="counter"><span id="count"></span>/5</p></div>
 		<h2 id="question">Q1. What is the eggplant's latin name?</h2>
 		<ul id="choices">
 			<li><button id="unclicked">A. Solanum Melongena</button></li>

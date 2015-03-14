@@ -70,43 +70,19 @@ header {
 	padding: 1em;
 }
 
-nav ul li {
-	text-transform: uppercase;
-	font-family: 'Crete Round', serif;
-	font-weight: 700;
-	font-size: 1.5em;
-	display: inline;
-  	margin-bottom: 0.25em;
-}
-
-nav ul li:first-child {
-	float: left;
-	margin-left: 3em;
-}
-
-nav ul li:last-child {
-	float: right;
-	margin-right: 3em;
-}
-
-nav a {
-	color: ##0A0C0E;
-}
-
 #title {
 	color: #0A0C0E;
 	font-family: 'Pacifico', cursive;
 	font-size: 4.5em;
 	text-align: center;
 	position: relative;
-	top: -0.50em;
-  	margin-bottom: 0.25em;
+  	margin-bottom: 0.70em;
 }
 
 #info {
   background: rgba(255,255,255,.2);
   border: 2px #290325 solid;
-  display: none;
+  display: block;
 }
 
 #info h1 {
@@ -155,24 +131,29 @@ nav a {
 	top: -2.25em;
 }
 
+#quizQuestions {
+  display: none;
+}
+
 #quizQuestions img {
 	height: 13%;
 	width: 13%;
 }
 
 #quizQuestions #counter {
-  position: relative;
-  bottom: 1.5em;
-  left: 2.25em;
+	text-align: right;
   font-size: 3em;
   font-family: 'Crete Round', serif;
-  display:none;
+  display: inline-block;
+  position: relative;
+  bottom: 1em;
+  left: 1em;
+
 }
 
 #quizQuestions h2 {
 	font-family: 'Pacifico', cursive;
 	font-size: 2em;
-	margin: 0.3em 0;
 }
 
 #quizQuestions ul li {
