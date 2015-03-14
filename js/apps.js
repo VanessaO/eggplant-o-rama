@@ -36,9 +36,10 @@ $(document).ready(function() {
 
 		//Consequence Functions
 		function correct() {
-			alert("correct!");
-			//var choice = document.querySelector("#" + event.target.id);
-			//addClass(choice, "correct");
+			alert(event.target.id);
+			var choice = "#" + event.target.id;
+			$(choice).addClass("correct");
+			//Play a ding!
 		}
 
 		// Quiz // PERHAPS gamePlay FUNCTION STARTS HERE??

@@ -187,13 +187,13 @@ header {
 	outline: none;
 }
 
-.correct {
+#quizQuestions .correct, #quizQuestions .correct:hover, #quizQuestions .correct:active {
 	background-color: #768F26;
 	box-shadow: none;
 	transform: none;
 }
 
-.incorrect {
+#quizQuestions .incorrect {
 	background-color: #91252F;
 	box-shadow: none;
 	transform: none;
