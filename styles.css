@@ -187,13 +187,13 @@ header {
 	outline: none;
 }
 
-#quizQuestions #correct {
+.correct {
 	background-color: #768F26;
 	box-shadow: none;
 	transform: none;
 }
 
-#quizQuestions #incorrect {
+.incorrect {
 	background-color: #91252F;
 	box-shadow: none;
 	transform: none;
