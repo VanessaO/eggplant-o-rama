@@ -9,15 +9,33 @@
 </head>
 <body>
 	<header>
-		<h2 id="restart">Start Over</h2>
+		<nav>
+			<ul class="clearfix">
+				<li><a class="intro" href="#">>>Intro</a></li>
+				<li><a class="restart" href="#">Start Over<<</a></li>
+			</ul>
+		</nav>
 		<h1 id="title">Eggplant-O-Rama</h1>
+		<div id="info">
+  <h1>Welcome to Eggplant-O-Rama!</h1>
+  <button id="start">Start!</button>
+  <p>Go ahead and test your eggplant knowledge!</p>
+		</div>
 	</header>
 	<div id="quizQuestions">
-		<div id="photo"><img src="images/eggplantOne.png" width="420em" height="325em"></div>
+		<div id="photo"><img src="http://i.imgur.com/uy7hs2X.png" width="420px" height="325px"></div>
+    <p id="counter"><span id="count">3</span>/5</p>
 		<h2 id="question">Q1. What is the eggplant's latin name?</h2>
-		<button id="unclicked">A. Solanum Melongena</button>
-		<button id="correct">B. Solanum Lycopersicum</button>
-		<button id="incorrect">C. Solanum Tuberosum</button>
+		<ul id="choices">
+			<li><button id="unclicked">A. Solanum Melongena</button></li>
+			<li><button id="correct">B. Solanum Lycopersicum</button></li>
+			<li><button id="incorrect">C. Solanum Tuberosum</button></li>
+		</ul>
 	</div>
+	<footer>
+		<div id="copy">
+			<p>Made with <span>&#9829;</span> by Vanessa Ogbuehi</p>
+		</div>
+	</footer>
 </body>
 </html>

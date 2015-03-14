@@ -1,0 +1,230 @@
+/*--- RESET ---*/
+html {
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+body {
+    margin: 0;
+    font-size: 16px;
+}
+h1,
+h2,
+h3,
+h4,
+p,
+blockquote,
+figure,
+ol,
+ul {
+    margin: 0;
+    padding: 0;
+}
+li {
+    display: inline;
+}
+h1,
+h2,
+h3,
+h4 {
+    font-size: inherit;
+}
+a {
+    text-decoration: none;
+    color: inherit;
+    -webkit-transition: .3s;
+    -moz-transition: .3s;
+    transition: .3s;
+}
+img {
+    max-width: 100%;
+    height: auto;
+    border: 0;
+}
+
+.clearfix:before,
+.clearfix:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+/*--- END RESET ---*/
+
+/*--- BEGIN CUSTOM STYLING ---*/
+
+body {
+	background-color: #8E7B8A;
+  background-image: url(http://www.transparenttextures.com/patterns/inspiration-geometry.png);
+	border-top: 1em solid #0A0C0E;
+}
+
+/*--- HEADER ---*/
+header {
+	position: relative;
+	height: 10%;
+	padding: 1em;
+}
+
+nav ul li {
+	text-transform: uppercase;
+	font-family: 'Crete Round', serif;
+	font-weight: 700;
+	font-size: 1.5em;
+	display: inline;
+  	margin-bottom: 0.25em;
+}
+
+nav ul li:first-child {
+	float: left;
+	margin-left: 3em;
+}
+
+nav ul li:last-child {
+	float: right;
+	margin-right: 3em;
+}
+
+nav a {
+	color: ##0A0C0E;
+}
+
+#title {
+	color: #0A0C0E;
+	font-family: 'Pacifico', cursive;
+	font-size: 4.5em;
+	text-align: center;
+	position: relative;
+	top: -0.50em;
+  	margin-bottom: 0.25em;
+}
+
+#info {
+  background: rgba(255,255,255,.2);
+  border: 2px #290325 solid;
+  display: none;
+}
+
+#info h1 {
+  font-family: 'Pacifico', cursive;
+  font-size: 2em;
+  padding: 1em 0;
+}
+
+#info p {
+  font-family: 'Crete Round', serif;
+  font-size: 2em;
+  padding: 1em;
+}
+
+#info button {
+	height: 1.5em;
+	background-color: #290325;
+	border: 1px #290325 solid;
+	border-radius: 15px;
+	box-shadow: 1px 3px #5A435A;
+	padding: 0 0.50em;
+	color: #fff;
+	font-family: 'Crete Round', serif;
+	font-size: 1.75em;
+}
+
+#info button:hover {
+	background-color: #768f26;
+}
+
+#info button:active {
+	background-color: #768f26;
+	box-shadow: 1px 1px #5A435A;
+	transform: translate(1px, 1px);
+}
+
+#info button:focus {
+	outline: none;
+}
+/*--- QUIZ QUESTIONS ---*/
+#quizQuestions, #info{
+	width: 70%;
+	margin: 0 auto;
+	text-align: center;
+	position: relative;
+	top: -2.25em;
+}
+
+#quizQuestions img {
+	height: 13%;
+	width: 13%;
+}
+
+#quizQuestions #counter {
+  position: relative;
+  bottom: 1.5em;
+  left: 2.25em;
+  font-size: 3em;
+  font-family: 'Crete Round', serif;
+  display:none;
+}
+
+#quizQuestions h2 {
+	font-family: 'Pacifico', cursive;
+	font-size: 2em;
+	margin: 0.3em 0;
+}
+
+#quizQuestions ul li {
+	display: block;
+	margin: 1em 0;
+}
+
+#quizQuestions button {
+	height: 1.5em;
+	background-color: #8E7B8A;
+	border: 1px #290325 solid;
+	border-radius: 15px;
+	box-shadow: 3px 7px #5A435A;
+	padding: 0 0.50em;
+	color: #fff;
+	font-family: 'Crete Round', serif;
+	font-size: 1.75em;
+}
+
+#quizQuestions button:hover {
+	background-color: #290325;
+}
+
+#quizQuestions button:active {
+	background-color: #290325;
+	box-shadow: 1px 5px #5A435A;
+	transform: translate(2px, 2px);
+}
+
+#quizQuestions button:focus {
+	outline: none;
+}
+
+#quizQuestions #correct {
+	background-color: #768F26;
+	box-shadow: none;
+	transform: none;
+}
+
+#quizQuestions #incorrect {
+	background-color: #91252F;
+	box-shadow: none;
+	transform: none;
+}
+
+/*--- FOOTER ---*/
+#copy {
+	height: 3em;
+	text-align: center;
+	font-family: 'Crete Round', serif;
+}
+
+#copy span {
+	color: #50611A;
+}
