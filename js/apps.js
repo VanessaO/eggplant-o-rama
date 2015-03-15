@@ -36,10 +36,17 @@ $(document).ready(function() {
 
 		//Consequence Functions
 		function correct() {
-			alert(event.target.id);
 			var choice = "#" + event.target.id;
 			$(choice).addClass("correct");
 			//Play a ding!
+			//$(wrongOne).remove();
+			//$(wrongTwo).remove();
+		}
+
+		function incorrect() {
+			alert(event.target.id);
+			var choice = "#" + event.target.id;
+			$(choice).addClass("incorrect");
 		}
 
 		// Quiz // PERHAPS gamePlay FUNCTION STARTS HERE??
@@ -49,6 +56,24 @@ $(document).ready(function() {
 		choice3.textContent = questionOne.answerThree;
 		quizQuestion.correct = quizQuestion.answerOne;
 
-		choice1.addEventListener("click", correct, false);
+
+		$('#choice1, #choice2, #choice3').click(function(){
+			if(this.id == "choice1") {
+				correct();
+				$("#choice2").fadeOut(1000);
+				$("#choice3").fadeOut(1000);
+			}
+			else if (this.id == "#choice2" || "#choice3") {
+				incorrect();
+			}
+		});
+				
+
+		/*if(choice1.addEventListener("click", correct, false)) {
+			//$(choice2).fadeOut(1000);
+			//$(choice3).fadeOut(1000);
+			//choice2.addEventListener("click", incorrect, false);
+			//choice3.addEventListener("click", incorrect, false);
+		}*/
 	};
 });

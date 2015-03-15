@@ -193,7 +193,7 @@ header {
 	transform: none;
 }
 
-#quizQuestions .incorrect {
+#quizQuestions .incorrect, #quizQuestions .incorrect:hover, #quizQuestions .incorrect:active {
 	background-color: #91252F;
 	box-shadow: none;
 	transform: none;
