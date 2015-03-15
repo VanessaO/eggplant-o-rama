@@ -40,6 +40,7 @@ $(document).ready(function() {
 		"A. Neither", 
 		"B. Vegetables", 
 		"C. Fruits");
+	
 	//Quiz Element Variables
 	var questionEl = document.getElementById('question');
 	var choice1 = document.getElementById('choice1');
@@ -47,17 +48,14 @@ $(document).ready(function() {
 	var choice3 = document.getElementById('choice3');
 	var i = 1;
 	
-
-	
-
 	//Consequence Functions
 	function correct(wrongOne, wrongTwo) {
-		document.getElementById("count").innerHTML = i;
-		i++;
 		var choice = "#" + event.target.id;
 		$(choice).addClass("correct");
 		$(wrongOne).fadeOut(1000);
 		$(wrongTwo).fadeOut(1000);
+		document.getElementById("count").innerHTML = i;
+		i++;
 		//Play a ding!
 		//$(wrongOne).remove();
 		//$(wrongTwo).remove();
@@ -88,7 +86,8 @@ $(document).ready(function() {
 				else if (this.id == "choice3") {
 					incorrect("#choice1","#choice2");
 				}
-				else{alert("ok");}
+				else{alert("ok");
+				}
 			});
 		}
 
@@ -107,7 +106,8 @@ $(document).ready(function() {
 				else if (this.id == "choice3") {
 					incorrect("#choice2","#choice1");
 				}
-				else{alert("ok");}
+				else{alert("ok");
+				}
 			});
 		}
 
@@ -126,7 +126,8 @@ $(document).ready(function() {
 				else if (this.id == "choice3") {
 					incorrect("#choice2","#choice1");
 				}
-				else{alert("ok");}
+				else{alert("ok");
+				}
 			});
 		}
 
@@ -145,7 +146,8 @@ $(document).ready(function() {
 				else if (this.id == "choice3") {
 					incorrect("#choice1","#choice2");
 				}
-				else{alert("ok");}
+				else{alert("ok");
+				}
 			});
 		}
 
@@ -164,16 +166,17 @@ $(document).ready(function() {
 				else if (this.id == "choice1") {
 					incorrect("#choice3","#choice2");
 				}
-				else{alert("ok");}
+				else{alert("ok");
+				}
 			});
 		}
 
 	// Function that controls gameplay (or quizplay?)
 	var gamePlay = function(){
-		//One();
+		One();
 		Two();
-		//Three();
-		//Four();
-		//Five();
+		Three();
+		Four();
+		Five();
 	};
 });
