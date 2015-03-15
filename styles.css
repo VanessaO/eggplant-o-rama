@@ -59,7 +59,7 @@ img {
 
 body {
 	background-color: #8E7B8A;
-  background-image: url(http://www.transparenttextures.com/patterns/inspiration-geometry.png);
+  background-image: url('images/inspiration-geometry.png');
 	border-top: 1em solid #0A0C0E;
 }
 
@@ -161,7 +161,7 @@ header {
 
 #quizQuestions #counter {
 	text-align: right;
-  font-size: 1.75em;
+  font-size: 2em;
   font-family: 'Crete Round', serif;
   display: inline-block;
   position: relative;
@@ -180,7 +180,7 @@ header {
 	margin: 1em 0;
 }
 
-#quizQuestions button {
+.normal {
 	height: 1.5em;
 	background-color: #8E7B8A;
 	border: 1px #290325 solid;
@@ -192,17 +192,17 @@ header {
 	font-size: 1.75em;
 }
 
-#quizQuestions button:hover {
+.normal:hover {
 	background-color: #290325;
 }
 
-#quizQuestions button:active {
+.normal:active {
 	background-color: #290325;
 	box-shadow: 1px 5px #5A435A;
 	transform: translate(2px, 2px);
 }
 
-#quizQuestions button:focus {
+.normal:focus {
 	outline: none;
 }
 

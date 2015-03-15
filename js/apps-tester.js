@@ -1,16 +1,6 @@
 $(document).ready(function() {
 
-	$("#start").click(function() {
-		start();
-	});
-	
-	function start(){
-		$("#quizQuestions, #counter").show(1000);
-		$("#info").hide();
-		nextQuestion();
-	}
-
-	//Quiz Element Variables
+	//Global Variables
 	var questionEl = document.getElementById('question');
 	var choice1 = document.getElementById('choice1');
 	var choice2 = document.getElementById('choice2');
@@ -18,6 +8,24 @@ $(document).ready(function() {
 	var count = document.getElementById('count');
 	var currentQuestion = 0;
 	var numCorrect = 0;
+
+	//Start and Restart Quiz
+	function start(){
+		$("#quizQuestions, #counter").show(1000);
+		$("#info").hide();
+		nextQuestion();
+	}
+
+	function restart() {
+		numCorrect = 0;
+		currentQuestion = 0;
+		$("#score").hide();
+		start();
+	}
+
+	$("#start").click(function() {
+		start();
+	});
 
 	//Quiz Questions and Answers As Objects
 	var questions = [
@@ -30,7 +38,7 @@ $(document).ready(function() {
 		},
 
 		questionTwo = {
-			question: "Q2. Eggplant is the most rich in what nutrient?", 
+			question: "Q2. Eggplant is most rich in what nutrient?", 
 			choices: ["A. Potassium", "B. Fiber", "C. Vitamin B3"],
 			correct: "B. Fiber"
 		},
@@ -54,6 +62,7 @@ $(document).ready(function() {
 		}
 	];
 	
+	//Main Gameplay -- Move through each question
 	function nextQuestion() {
 		if (currentQuestion == 0) {
 			questionEl.textContent = questionOne.question;
@@ -90,11 +99,11 @@ $(document).ready(function() {
 			choice3.textContent = questionFive['choices'][2];
 			count.innerHTML = 5;
 		}
-		else{
+		else {
+			//Produces final score
 			$("#quizQuestions, #counter").hide(1000);
 			$('#score').show(1000);
 			var scoreNum = document.getElementById('scoreNum');
-			//Sets question counter 
 			scoreNum.innerHTML = numCorrect;
 			$("#restart").click(function(){
 				restart();
@@ -103,32 +112,25 @@ $(document).ready(function() {
 		}
 	}
 
-	function restart() {
-		numCorrect = 0;
-		currentQuestion = 0;
-		$("#score").hide();
-		start();
+	//Checks clicked answer for correctness
+	function checkAnswer(answer, clickedBox) {
+		if(answer == questions[currentQuestion]['correct']) {
+			numCorrect++;
+			console.log(numCorrect);
+			//Add green to correct answer
+			//$(clickedBox).addClass("correct");
+		}
+		else {
+			//Add red to correct answer
+			//$(clickedBox).addClass("incorrect");
+		}
 	}
 
 	$("#choices li").click(function(){
 		var answer = $(this).text();
 		var clickedBox = "#" + event.target.id;
 		checkAnswer(answer, clickedBox);
-		currentQuestion+= 1;
-		//Sets question counter 
-		
+		currentQuestion+= 1;		
 		nextQuestion();
 	});
-
-
-	function checkAnswer(answer, clickedBox) {
-		if(answer == questions[currentQuestion]['correct']) {
-			numCorrect++;
-			console.log(numCorrect);
-			//$(clickedBox).addClass("correct");
-		}
-		else {
-			//$(clickedBox).addClass("incorrect");
-		}
-	}
 });
