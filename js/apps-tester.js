@@ -1,16 +1,21 @@
 $(document).ready(function() {
 
 	$("#start").click(function() {
+		start();
+	});
+	
+	function start(){
 		$("#quizQuestions, #counter").show(1000);
 		$("#info").hide();
 		nextQuestion();
-	});
-	
+	}
+
 	//Quiz Element Variables
 	var questionEl = document.getElementById('question');
 	var choice1 = document.getElementById('choice1');
 	var choice2 = document.getElementById('choice2');
 	var choice3 = document.getElementById('choice3');
+	var count = document.getElementById('count');
 	var currentQuestion = 0;
 	var numCorrect = 0;
 
@@ -55,34 +60,54 @@ $(document).ready(function() {
 			choice1.textContent = questionOne['choices'][0];
 			choice2.textContent = questionOne['choices'][1];
 			choice3.textContent = questionOne['choices'][2];
+			count.innerHTML = 1;
 		}
 		else if (currentQuestion == 1) {
 			questionEl.textContent = questionTwo.question;
 			choice1.textContent = questionTwo['choices'][0];
 			choice2.textContent = questionTwo['choices'][1];
 			choice3.textContent = questionTwo['choices'][2];
+			count.innerHTML = 2;
 		}
 		else if (currentQuestion == 2) {
 			questionEl.textContent = questionThree.question;
 			choice1.textContent = questionThree['choices'][0];
 			choice2.textContent = questionThree['choices'][1];
 			choice3.textContent = questionThree['choices'][2];
+			count.innerHTML = 3;
 		}
 		else if (currentQuestion == 3) {
 			questionEl.textContent = questionFour.question;
 			choice1.textContent = questionFour['choices'][0];
 			choice2.textContent = questionFour['choices'][1];
 			choice3.textContent = questionFour['choices'][2];
+			count.innerHTML = 4;
 		}
 		else if (currentQuestion == 4) {
 			questionEl.textContent = questionFive.question;
 			choice1.textContent = questionFive['choices'][0];
 			choice2.textContent = questionFive['choices'][1];
 			choice3.textContent = questionFive['choices'][2];
+			count.innerHTML = 5;
 		}
 		else{
-			alert("game over");
+			$("#quizQuestions, #counter").hide(1000);
+			$('#score').show(1000);
+			var scoreNum = document.getElementById('scoreNum');
+			//Sets question counter 
+			scoreNum.innerHTML = numCorrect;
+			$("#restart").click(function(){
+				restart();
+				console.log("we on question " + currentQuestion);
+			})
 		}
+	}
+
+	function restart() {
+		numCorrect = 0;
+		currentQuestion = 0;
+		$("#score").hide();
+		start();
 	}
 
 	$("#choices li").click(function(){
@@ -90,9 +115,8 @@ $(document).ready(function() {
 		var clickedBox = "#" + event.target.id;
 		checkAnswer(answer, clickedBox);
 		currentQuestion+= 1;
-		var count = document.getElementById('count');
 		//Sets question counter 
-		count.innerHTML = currentQuestion;
+		
 		nextQuestion();
 	});
 

@@ -79,7 +79,7 @@ header {
   	margin-bottom: 0.70em;
 }
 
-#info {
+#info, #score {
   background: rgba(255,255,255,.2);
   border: 2px #290325 solid;
   display: block;
@@ -91,13 +91,13 @@ header {
   padding: 1em 0;
 }
 
-#info p {
+#info p, #score p {
   font-family: 'Crete Round', serif;
   font-size: 2em;
   padding: 1em;
 }
 
-#info button {
+#info button, #score button {
 	height: 1.5em;
 	background-color: #290325;
 	border: 1px #290325 solid;
@@ -109,21 +109,40 @@ header {
 	font-size: 1.75em;
 }
 
-#info button:hover {
+#info button:hover, #score button:hover {
 	background-color: #768f26;
 }
 
-#info button:active {
+#info button:active, #score button:active {
 	background-color: #768f26;
 	box-shadow: 1px 1px #5A435A;
 	transform: translate(1px, 1px);
 }
 
-#info button:focus {
+#info button:active, #score button:focus {
 	outline: none;
 }
+
+#score {
+	display: none;
+}
+
+#score h1 {
+	font-family: 'Pacifico', cursive;
+	font-size: 2em;
+	padding: 0.5em 0 0.25em 0;
+}
+
+#score p {
+	padding: 0;
+}
+
+#score button {
+	margin: 1em;
+}
+
 /*--- QUIZ QUESTIONS ---*/
-#quizQuestions, #info{
+#quizQuestions, #info, #score{
 	width: 70%;
 	margin: 0 auto;
 	text-align: center;
@@ -142,7 +161,7 @@ header {
 
 #quizQuestions #counter {
 	text-align: right;
-  font-size: 3em;
+  font-size: 1.75em;
   font-family: 'Crete Round', serif;
   display: inline-block;
   position: relative;
