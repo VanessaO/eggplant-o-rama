@@ -115,14 +115,18 @@ $(document).ready(function() {
 	//Checks clicked answer for correctness
 	function checkAnswer(answer, clickedBox) {
 		if(answer == questions[currentQuestion]['correct']) {
+			$("#correctInfo").show(500);
+			document.getElementById('result').innerHTML = "Correct!";
+			document.getElementById('answer').innerHTML = questions[currentQuestion]['correct'];
+			$("#result").addClass("correct");
 			numCorrect++;
 			console.log(numCorrect);
-			//Add green to correct answer
-			//$(clickedBox).addClass("correct");
 		}
 		else {
-			//Add red to correct answer
-			//$(clickedBox).addClass("incorrect");
+			$("#correctInfo").show(500);
+			document.getElementById('result').innerHTML = "Wrong.";
+			document.getElementById('answer').innerHTML = questions[currentQuestion]['correct'];
+			$("#result").addClass("incorrect");
 		}
 	}
 
@@ -130,7 +134,11 @@ $(document).ready(function() {
 		var answer = $(this).text();
 		var clickedBox = "#" + event.target.id;
 		checkAnswer(answer, clickedBox);
-		currentQuestion+= 1;		
+	});
+
+	$("#next").click(function(){
+		$("#correctInfo").hide(500);
+		currentQuestion+= 1;
 		nextQuestion();
 	});
 });
