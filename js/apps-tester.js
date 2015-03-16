@@ -118,7 +118,7 @@ $(document).ready(function() {
 			$("#correctInfo").show(500);
 			document.getElementById('result').innerHTML = "Correct!";
 			document.getElementById('answer').innerHTML = questions[currentQuestion]['correct'];
-			$("#result").addClass("correct");
+			//$("#result").addClass("correct");
 			numCorrect++;
 			console.log(numCorrect);
 		}
@@ -126,7 +126,7 @@ $(document).ready(function() {
 			$("#correctInfo").show(500);
 			document.getElementById('result').innerHTML = "Wrong.";
 			document.getElementById('answer').innerHTML = questions[currentQuestion]['correct'];
-			$("#result").addClass("incorrect");
+			//$("#result").addClass("incorrect");
 		}
 	}
 
