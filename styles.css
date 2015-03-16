@@ -79,7 +79,7 @@ header {
   	margin-bottom: 0.70em;
 }
 
-#info, #score {
+#info, #score, #correctInfo {
   background: rgba(255,255,255,.2);
   border: 2px #290325 solid;
   display: block;
@@ -91,13 +91,13 @@ header {
   padding: 1em 0;
 }
 
-#info p, #score p {
+#info p, #score p, #correctInfo p {
   font-family: 'Crete Round', serif;
   font-size: 2em;
   padding: 1em;
 }
 
-#info button, #score button {
+#info button, #score button, #correctInfo button {
 	height: 1.5em;
 	background-color: #290325;
 	border: 1px #290325 solid;
@@ -109,17 +109,17 @@ header {
 	font-size: 1.75em;
 }
 
-#info button:hover, #score button:hover {
+#info button:hover, #score button:hover, #correctInfo button:hover {
 	background-color: #768f26;
 }
 
-#info button:active, #score button:active {
+#info button:active, #score button:active, #correctInfo button:active {
 	background-color: #768f26;
 	box-shadow: 1px 1px #5A435A;
 	transform: translate(1px, 1px);
 }
 
-#info button:active, #score button:focus {
+#info button:focus, #score button:focus, #correctInfo button:focus{
 	outline: none;
 }
 
@@ -127,22 +127,33 @@ header {
 	display: none;
 }
 
-#score h1 {
+#score h1, #correctInfo h1 {
 	font-family: 'Pacifico', cursive;
 	font-size: 2em;
 	padding: 0.5em 0 0.25em 0;
 }
 
-#score p {
+#score p, #correctInfo p {
 	padding: 0;
 }
 
-#score button {
+#score button, #correctInfo button {
 	margin: 1em;
 }
 
+#correctInfo {
+	display: none;
+}
+
+.correct {
+	color: #768F26;
+}
+
+.incorrect {
+	color: #91252F;
+}
 /*--- QUIZ QUESTIONS ---*/
-#quizQuestions, #info, #score{
+#quizQuestions, #info, #score, #correctInfo{
 	width: 70%;
 	margin: 0 auto;
 	text-align: center;
@@ -204,18 +215,6 @@ header {
 
 .normal:focus {
 	outline: none;
-}
-
-#quizQuestions .correct, #quizQuestions .correct:hover, #quizQuestions .correct:active {
-	background-color: #768F26;
-	box-shadow: none;
-	transform: none;
-}
-
-#quizQuestions .incorrect, #quizQuestions .incorrect:hover, #quizQuestions .incorrect:active {
-	background-color: #91252F;
-	box-shadow: none;
-	transform: none;
 }
 
 /*--- FOOTER ---*/
